@@ -1,0 +1,17 @@
+package com.cg.messaging.RabbitMessagingSender.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.cg.messaging.RabbitMessagingSender.sender.Sender;
+
+public class MessageServiceImpl implements MessageService{
+
+	@Autowired
+	private Sender sender;
+	
+	@Override
+	public String messageWrite(String message) {
+		return "Hello World!!";
+	}
+
+}

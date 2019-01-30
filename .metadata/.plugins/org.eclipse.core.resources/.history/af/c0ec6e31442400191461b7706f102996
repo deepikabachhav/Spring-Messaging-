@@ -1,0 +1,5 @@
+package com.cg.bank.SpringBankProject.entity;
+
+public class Transaction implements Serializable{
+
+}

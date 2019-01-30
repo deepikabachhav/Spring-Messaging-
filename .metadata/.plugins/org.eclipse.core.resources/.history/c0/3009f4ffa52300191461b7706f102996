@@ -1,0 +1,5 @@
+package com.cg.messaging.SpringMessagingBank.receiver;
+
+public class Receiver {
+
+}

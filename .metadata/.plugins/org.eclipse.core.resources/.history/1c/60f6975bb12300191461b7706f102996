@@ -1,0 +1,5 @@
+package com.cg.messaging.RabbitMessagingSender.service;
+
+public interface MessageService {
+
+}

@@ -1,0 +1,5 @@
+package com.cg.transactionservice.SpringTransactionService.sender;
+
+public class Sender {
+
+}

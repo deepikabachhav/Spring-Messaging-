@@ -1,0 +1,25 @@
+package com.cg.transactionservice.SpringTransactionService.sender;
+
+import org.springframework.amqp.core.Queue;
+import org.springframework.amqp.rabbit.core.RabbitMessagingTemplate;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Lazy;
+import org.springframework.stereotype.Component;
+
+@Component 
+@Lazy
+public class Sender {
+	@Autowired
+	private RabbitMessagingTemplate template;
+	
+	
+	@Bean
+	public Queue queue() {
+		return new Queue("UpdatedBalance", false);
+	}
+	
+	public void send(String message){
+		template.convertAndSend("UpdatedBalance", message);
+	}
+}

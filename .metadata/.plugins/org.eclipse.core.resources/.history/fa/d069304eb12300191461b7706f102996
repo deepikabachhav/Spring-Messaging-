@@ -1,0 +1,23 @@
+package com.cg.messaging.RabbitMessagingSender.resource;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.cg.messaging.RabbitMessagingSender.service.MessageService;
+
+@RestController
+public class MessageResource {
+	
+	
+	private MessageService messageService;
+	
+	@Autowired
+	public MessageResource(MessageService messageService) {
+		this.messageService=messageService;
+	}
+	
+	@PostMapping( path="/hello")
+	public Customer register(@RequestBody Customer customer){
+		return customerService.register(customer);
+	}
+}

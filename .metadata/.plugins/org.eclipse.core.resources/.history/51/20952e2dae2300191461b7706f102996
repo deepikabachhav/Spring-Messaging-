@@ -1,0 +1,21 @@
+package com.cg.messaging.MessagingReceiver.receiver;
+
+import org.springframework.amqp.rabbit.annotation.RabbitListener;
+import org.springframework.context.annotation.Bean;
+
+import com.rabbitmq.client.AMQP.Queue;
+
+public class Receiver {
+
+	@Bean
+	public Queue queue() {
+		return new Queue("MessageQueue", false);
+	}
+
+	@RabbitListener(queues = "MessageQueue")
+	public void processMessage(String email) {
+		System.out.println(email);
+		mailer.sendMail(email);
+	}
+
+}

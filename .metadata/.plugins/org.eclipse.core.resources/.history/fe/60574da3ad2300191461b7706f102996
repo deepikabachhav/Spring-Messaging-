@@ -1,0 +1,21 @@
+package com.cg.messaging.RabbitMessagingSender.sender;
+
+public class Sender {
+
+RabbitMessagingTemplate template;
+	
+	@Autowired
+	public Sender(RabbitMessagingTemplate template){
+		this.template = template;
+	}
+
+	@Bean
+	public Queue queue() {
+		return new Queue("CustomerQ", false);
+	}
+	
+	public void send(String message){
+		template.convertAndSend("CustomerQ", message);
+	}
+}
+}

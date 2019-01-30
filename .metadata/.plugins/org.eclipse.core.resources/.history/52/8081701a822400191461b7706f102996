@@ -1,0 +1,5 @@
+package com.cg.test.accountservice;
+
+public class Reservation {
+
+}

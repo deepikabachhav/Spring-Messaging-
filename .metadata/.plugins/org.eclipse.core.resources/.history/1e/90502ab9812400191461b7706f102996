@@ -1,0 +1,10 @@
+ package com.cg.test.accountservice.testaccount;
+
+public class ReservationPOJOTest {
+	
+	@Test
+	public void testShouldConstruct() {
+		
+	}
+
+}

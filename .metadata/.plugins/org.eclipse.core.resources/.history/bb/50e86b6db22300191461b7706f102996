@@ -1,0 +1,12 @@
+package com.cg.messaging.RabbitMessagingSender.service;
+
+public class MessageServiceImpl implements MessageService{
+
+	@Autowired
+	private Sender sender;
+	@Override
+	public String messageWrite(String message) {
+		return "Hello World!!";
+	}
+
+}
